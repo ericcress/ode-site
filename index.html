@@ -257,7 +257,13 @@
     .hero .wrap { padding: 54px 24px 62px; }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  .promo-bar { background: var(--plum); color: var(--plum-ink); text-align: center; font-size: .82rem; letter-spacing: .01em; padding: 9px 16px; }
+  .promo-bar b { color: var(--rose-hero); font-weight: 700; }
+  .intro-flag { display: inline-block; font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-hero); border: 1px solid rgba(228,186,106,.45); border-radius: 100px; padding: 4px 12px; margin-bottom: 14px; }
+  .price-card .top .was { font-size: .8rem; color: var(--plum-soft); text-decoration: line-through; margin-left: 10px; vertical-align: middle; }
 </style>
+
+<div class="promo-bar">🎁 Launch offer — your <b>first Ode is just $5.</b></div>
 
 <nav>
   <div class="wrap">
@@ -279,7 +285,7 @@
         <h1>Not a card.<br>An <em>ode.</em></h1>
         <p class="sub">A one-of-a-kind website, made for one person — built around the things they actually love. Now make your own.</p>
         <div class="actions">
-          <a href="#start" class="btn btn-primary">Make one — $20</a>
+          <a href="#start" class="btn btn-primary">Make your first for $5</a>
           <a href="#how" class="btn btn-ghost">See how it works</a>
         </div>
         <div class="trust">
@@ -377,12 +383,13 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Pricing</span>
-      <h2>One price. No surprises.</h2>
+      <h2>Your first Ode is $5.</h2>
     </div>
     <div class="price-card">
       <div class="top">
-        <div class="amt"><sup>$</sup>20</div>
-        <div class="per">per Ode</div>
+        <div class="intro-flag">Launch offer</div>
+        <div class="amt"><sup>$</sup>5<span class="was">$20</span></div>
+        <div class="per">your first Ode · $20 each after</div>
       </div>
       <ul>
         <li><span class="ck">✦</span> A fully custom, interactive website — built around them</li>
