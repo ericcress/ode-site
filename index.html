@@ -274,7 +274,7 @@
       <a href="#what" class="txt">What it is</a>
       <a href="#how" class="txt">How it works</a>
       <a href="#price" class="txt">Pricing</a>
-      <a href="#start" class="btn btn-primary nav-cta">Make one</a>
+      <a href="https://gift.ode.gift/start" class="btn btn-primary nav-cta">Make one</a>
     </div>
   </div>
 </nav>
@@ -287,7 +287,7 @@
         <h1>Not a card.<br>An <em>ode.</em></h1>
         <p class="sub">A one-of-a-kind website, made for one person — built around the things they actually love. Now make your own.</p>
         <div class="actions">
-          <a href="#start" class="btn btn-primary">Make one — $20</a>
+          <a href="https://gift.ode.gift/start" class="btn btn-primary">Make one — $20</a>
           <a href="#how" class="btn btn-ghost">See how it works</a>
         </div>
         <div class="trust">
@@ -404,7 +404,7 @@
         <span class="g-tx"><b>Money-back guarantee.</b> If it doesn't make them smile, you don't pay. You'll see the whole thing before a cent changes hands.</span>
       </div>
       <div class="foot">
-        <a href="#start" class="btn btn-primary" style="width:100%;justify-content:center;">Start an Ode</a>
+        <a href="https://gift.ode.gift/start" class="btn btn-primary" style="width:100%;justify-content:center;">Start an Ode</a>
         <span class="soon">Elaborate, multi-scene &amp; rush builds — premium options coming soon.</span>
       </div>
     </div>
@@ -418,53 +418,9 @@
       <h2>Start an Ode.</h2>
       <p>Tell us about the person. We'll build it and send you a private preview — you decide if it's worth $20 after you see it.</p>
     </div>
-    <div class="form-wrap">
-      <form id="odeForm" class="form-grid" novalidate>
-        <div class="field">
-          <label for="yn">Your name</label>
-          <input id="yn" name="yourname" type="text" placeholder="Jordan" required>
-        </div>
-        <div class="field">
-          <label for="ye">Your email <span class="hint">— where the preview goes</span></label>
-          <input id="ye" name="youremail" type="email" placeholder="you@email.com" required>
-        </div>
-        <div class="field">
-          <label for="rn">Who's it for?</label>
-          <input id="rn" name="recipient" type="text" placeholder="Their name" required>
-        </div>
-        <div class="field">
-          <label for="oc">The occasion</label>
-          <select id="oc" name="occasion">
-            <option>Birthday</option>
-            <option>Anniversary</option>
-            <option>Congratulations</option>
-            <option>Thank you</option>
-            <option>Just because</option>
-            <option>Something else</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="ab">What do they love? What's the story? <span class="hint">— the more specific, the better</span></label>
-          <textarea id="ab" name="about" placeholder="Their hobby, their job, a running joke, a shared memory. The weirder and more specific, the better it turns out." required></textarea>
-        </div>
-        <div class="field full">
-          <label for="ms">Your message to them <span class="hint">— you can refine this later</span></label>
-          <textarea id="ms" name="message" placeholder="Say the thing. We'll help you make it land."></textarea>
-        </div>
-        <div class="field full">
-          <div class="photo-note">📷 <b>Got photos?</b> Even better — we'll email you right after to grab a few. They make it land harder.</div>
-        </div>
-        <div class="form-submit">
-          <button type="submit" class="btn btn-primary">Send my details →</button>
-          <span class="fine">No payment now. You'll only be charged $20 once you've seen it and love it.</span>
-        </div>
-      </form>
-      <div class="confirm" id="confirm">
-        <div class="big">💌</div>
-        <h3>Your Ode is on its way.</h3>
-        <p>We've got the details for <span class="em" id="c-recip">them</span>. We'll build it and email a private preview to <span class="em" id="c-email">you</span> in under 24 hours.</p>
-        <p>You'll only pay <span class="em">$20</span> once you've seen the whole thing and love it. If you don't, it quietly disappears — no charge.</p>
-      </div>
+    <div style="text-align:center;">
+      <a href="https://gift.ode.gift/start" class="btn btn-primary" style="font-size:1.1rem;padding:16px 36px;">Start your Ode →</a>
+      <p style="margin-top:16px;color:var(--ink-faint);font-size:.9rem;">Takes 2 minutes · add a few photos · no payment until you love it.</p>
     </div>
   </div>
 </section>
@@ -508,42 +464,3 @@
     <p class="meta">© 2026 Ode · Made with care · ode.gift</p>
   </div>
 </footer>
-
-<script>
-  (function () {
-    // ── SETUP (free, ~2 min): create a form at formspree.io and paste its
-    //    endpoint below. Until you do, the form runs in demo mode (shows the
-    //    confirmation without sending). No cost, no code changes needed. ──
-    var ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-
-    var form = document.getElementById('odeForm');
-    var confirmEl = document.getElementById('confirm');
-
-    function showConfirm() {
-      document.getElementById('c-recip').textContent = (document.getElementById('rn').value || 'them').trim();
-      document.getElementById('c-email').textContent = (document.getElementById('ye').value || 'you').trim();
-      form.style.display = 'none';
-      confirmEl.classList.add('show');
-      confirmEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!document.getElementById('yn').value.trim() || !document.getElementById('ye').value.trim() ||
-          !document.getElementById('rn').value.trim() || !document.getElementById('ab').value.trim()) {
-        form.reportValidity();
-        return;
-      }
-      // Demo mode until you paste a real endpoint above.
-      if (ENDPOINT.indexOf('YOUR_FORM_ID') !== -1) { showConfirm(); return; }
-
-      var btn = form.querySelector('button[type="submit"]');
-      var label = btn.textContent;
-      btn.disabled = true; btn.textContent = 'Sending…';
-      fetch(ENDPOINT, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-        .then(function () { showConfirm(); })
-        .catch(function () { showConfirm(); })  // still confirm; you'll also get it via Formspree
-        .finally(function () { btn.disabled = false; btn.textContent = label; });
-    });
-  })();
-</script>
