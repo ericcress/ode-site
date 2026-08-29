@@ -216,6 +216,8 @@
   .form-submit { grid-column: 1 / -1; margin-top: 8px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .form-submit .btn { width: 100%; justify-content: center; font-size: 1.05rem; padding: 16px; }
   .form-submit .fine { font-size: .82rem; color: var(--ink-faint); text-align: center; }
+  .photo-note { font-size: .9rem; color: var(--ink-soft); background: var(--rose-soft); border: 1px solid var(--line); border-radius: 12px; padding: 12px 15px; }
+  .photo-note b { color: var(--rose-deep); }
 
   /* confirmation */
   .confirm { display: none; text-align: center; padding: 20px 10px; }
@@ -448,6 +450,9 @@
         <div class="field full">
           <label for="ms">Your message to them <span class="hint">— you can refine this later</span></label>
           <textarea id="ms" name="message" placeholder="Say the thing. We'll help you make it land."></textarea>
+        </div>
+        <div class="field full">
+          <div class="photo-note">📷 <b>Got photos?</b> Even better — we'll email you right after to grab a few. They make it land harder.</div>
         </div>
         <div class="form-submit">
           <button type="submit" class="btn btn-primary">Send my details →</button>
