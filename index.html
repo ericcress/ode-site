@@ -263,6 +263,21 @@
   .promo-bar b { color: var(--rose-hero); font-weight: 700; }
   .intro-flag { display: inline-block; font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-hero); border: 1px solid rgba(228,186,106,.45); border-radius: 100px; padding: 4px 12px; margin-bottom: 14px; }
   .price-card .top .was { font-size: .8rem; color: var(--plum-soft); text-decoration: line-through; margin-left: 10px; vertical-align: middle; }
+
+  /* ── real examples gallery ── */
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  @media (max-width: 680px) { .gallery { grid-template-columns: 1fr; } }
+  .g-card { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-sm); text-decoration: none; color: inherit; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+  .g-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--line-2); }
+  .g-thumb { aspect-ratio: 1200 / 630; background: var(--plum); overflow: hidden; }
+  .g-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .g-body { padding: 20px 22px 22px; }
+  .g-occasion { font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--rose); }
+  .g-body h3 { margin: .3em 0 .28em; color: var(--ink); }
+  .g-body p { color: var(--ink-soft); font-size: .96rem; margin: 0 0 .9em; }
+  .g-cta { font-family: "Figtree"; font-weight: 600; font-size: .9rem; color: var(--rose); }
+  .g-card:hover .g-cta { text-decoration: underline; }
+  .gallery-note { text-align: center; color: var(--ink-faint); font-size: .92rem; margin-top: 26px; }
 </style>
 
 <div class="promo-bar">🎁 Launch offer — try your first Ode for <b>$5</b> <span style="opacity:.75">(regularly $15)</span></div>
@@ -273,6 +288,7 @@
     <div class="links">
       <a href="#what" class="txt">What it is</a>
       <a href="#how" class="txt">How it works</a>
+      <a href="#examples" class="txt">Examples</a>
       <a href="#price" class="txt">Pricing</a>
       <a href="https://gift.ode.gift/start" class="btn btn-primary nav-cta">Make one</a>
     </div>
@@ -377,6 +393,55 @@
         <span class="tag">Pay only when you love it</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="examples">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">See a few</span>
+      <h2>Real Odes, start to finish.</h2>
+      <p>These are made-up recipients — but every one is a real, interactive page. Open one and poke around: tap, flip, press play.</p>
+    </div>
+    <div class="gallery">
+      <a class="g-card" href="https://gift.ode.gift/mixtape" target="_blank" rel="noopener">
+        <div class="g-thumb"><img src="https://gift.ode.gift/mixtape/og.jpg" alt="The Mixtape — a 50th birthday Ode" loading="lazy"></div>
+        <div class="g-body">
+          <span class="g-occasion">50th Birthday</span>
+          <h3>The Mixtape</h3>
+          <p>His life as a cassette you can actually play — flip Side A to Side B, tap a track for the liner notes.</p>
+          <span class="g-cta">Open this Ode →</span>
+        </div>
+      </a>
+      <a class="g-card" href="https://gift.ode.gift/passport" target="_blank" rel="noopener">
+        <div class="g-thumb"><img src="https://gift.ode.gift/passport/og.jpg" alt="The Passport — a 10th anniversary Ode" loading="lazy"></div>
+        <div class="g-body">
+          <span class="g-occasion">10th Anniversary</span>
+          <h3>The Passport</h3>
+          <p>Ten years mapped as a travel passport — tap each stamp and that trip's story unfurls.</p>
+          <span class="g-cta">Open this Ode →</span>
+        </div>
+      </a>
+      <a class="g-card" href="https://gift.ode.gift/helloworld" target="_blank" rel="noopener">
+        <div class="g-thumb"><img src="https://gift.ode.gift/helloworld/og.jpg" alt="Hello, World — a new baby Ode" loading="lazy"></div>
+        <div class="g-body">
+          <span class="g-occasion">New Baby</span>
+          <h3>Hello, World</h3>
+          <p>A newborn keepsake that comes alive — her stats, the day she arrived, and the firsts still to come.</p>
+          <span class="g-cta">Open this Ode →</span>
+        </div>
+      </a>
+      <a class="g-card" href="https://gift.ode.gift/portland" target="_blank" rel="noopener">
+        <div class="g-thumb"><img src="https://gift.ode.gift/portland/og.jpg" alt="The Comeback — an Ode for making it through" loading="lazy"></div>
+        <div class="g-body">
+          <span class="g-occasion">Made it through a hard chapter</span>
+          <h3>The Comeback</h3>
+          <p>A letter to someone who came through the worst of it — here, the city of Portland itself. Proof we can build an Ode for anyone, or anything.</p>
+          <span class="g-cta">Open this Ode →</span>
+        </div>
+      </a>
+    </div>
+    <p class="gallery-note">Yours will be built from scratch, around your one person.</p>
   </div>
 </section>
 
