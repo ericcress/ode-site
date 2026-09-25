@@ -261,6 +261,8 @@
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
   .intro-flag { display: inline-block; font-size: .66rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-hero); border: 1px solid rgba(228,186,106,.45); border-radius: 100px; padding: 4px 12px; margin-bottom: 14px; }
+  .price-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; max-width: 980px; margin: 0 auto; align-items: start; }
+  .price-row .price-card { max-width: none; margin: 0; }
   .price-card .top .was { font-size: .8rem; color: var(--plum-soft); text-decoration: line-through; margin-left: 10px; vertical-align: middle; }
 
   /* ── real examples gallery ── */
@@ -469,26 +471,48 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Pricing</span>
-      <h2>Try your first for $5.</h2>
+      <h2>An Ode for the ones you love. A Card for the rest of your list.</h2>
     </div>
-    <div class="price-card">
-      <div class="top">
-        <div class="amt"><sup>$</sup>5</div>
-        <div class="per">per Ode</div>
+    <div class="price-row">
+      <div class="price-card">
+        <div class="top">
+          <div class="amt"><sup>$</sup>15</div>
+          <div class="per">per Ode &middot; your first is $5</div>
+        </div>
+        <ul>
+          <li><span class="ck">✦</span> A fully custom, interactive keepsake — built around them</li>
+          <li><span class="ck">✦</span> Up to 3 rounds of edits to your message</li>
+          <li><span class="ck">✦</span> A shareable link, ready the moment you publish</li>
+          <li><span class="ck">✦</span> Hosted and live for a full year, yours to keep</li>
+        </ul>
+        <div class="guarantee">
+          <span class="g-ico">💛</span>
+          <span class="g-tx"><b>Try it before you buy it.</b> We build the whole thing and show you first. You only pay when you're ready to send it.</span>
+        </div>
+        <div class="foot">
+          <a href="https://gift.ode.gift/start" class="btn btn-primary" style="width:100%;justify-content:center;">Start an Ode</a>
+          <span class="soon">Elaborate, multi-scene &amp; rush builds — premium options coming soon.</span>
+        </div>
       </div>
-      <ul>
-        <li><span class="ck">✦</span> A fully custom, interactive keepsake — built around them</li>
-        <li><span class="ck">✦</span> Up to 3 rounds of edits to your message</li>
-        <li><span class="ck">✦</span> A shareable link, ready the moment you publish</li>
-        <li><span class="ck">✦</span> Hosted and live for a full year, yours to keep</li>
-      </ul>
-      <div class="guarantee">
-        <span class="g-ico">💛</span>
-        <span class="g-tx"><b>Try it before you buy it.</b> We build the whole thing and show you first. You only pay when you're ready to send it.</span>
-      </div>
-      <div class="foot">
-        <a href="https://gift.ode.gift/start" class="btn btn-primary" style="width:100%;justify-content:center;">Start an Ode</a>
-        <span class="soon">Elaborate, multi-scene &amp; rush builds — premium options coming soon.</span>
+      <div class="price-card">
+        <div class="top">
+          <div class="amt"><sup>$</sup>5</div>
+          <div class="per">per Card</div>
+        </div>
+        <ul>
+          <li><span class="ck">✦</span> One clever screen, made just for them</li>
+          <li><span class="ck">✦</span> For a colleague, client, teammate or neighbor</li>
+          <li><span class="ck">✦</span> Your note, in your own words</li>
+          <li><span class="ck">✦</span> A shareable link, live for a full year</li>
+        </ul>
+        <div class="guarantee">
+          <span class="g-ico">💛</span>
+          <span class="g-tx"><b>Same promise.</b> We make it and show you first. You only pay when you're ready to send it.</span>
+        </div>
+        <div class="foot">
+          <a href="https://gift.ode.gift/start?tier=card" class="btn btn-primary" style="width:100%;justify-content:center;">Start a Card</a>
+          <span class="soon">A few lines from you is plenty.</span>
+        </div>
       </div>
     </div>
   </div>
